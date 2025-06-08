@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cruise In-Out-Back Easing Demo</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        background: repeating-linear-gradient(
+          45deg,
+          #232323 0 20px,
+          #282828 20px 40px
+        );
+        color: white;
+        font-family: sans-serif;
+        text-align: center;
+      }
+      h1 {
+        margin: 20px 0;
+        color: transparent;
+      }
+      .scene {
+        position: relative;
+        width: 80%;
+        height: 420px;
+      }
+      .ball {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: conic-gradient(
+          in oklab,
+          #f25022 0deg,
+          #f25022 30deg,
+          #7fba00 90deg,
+          #7fba00 120deg,
+          #ffb900 180deg,
+          #ffb900 210deg,
+          #00a4ef 260deg,
+          #00a4ef 310deg,
+          #f25022 360deg
+        );
+        mask: radial-gradient(circle at center, transparent 30%, black 70%);
+        -webkit-mask: radial-gradient(
+          circle at center,
+          transparent 30%,
+          black 70%
+        );
+      }
+      #ball1 {
+        top: 50px;
+        left: 0;
+      }
+      #ball2 {
+        top: 175px;
+        left: 0;
+      }
+      #ball3 {
+        top: 300px;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Cruise In-Out-Back Easing Demo</h1>
+    <div class="scene">
+      <div id="ball1" class="ball"></div>
+      <div id="ball2" class="ball"></div>
+      <div id="ball3" class="ball"></div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
